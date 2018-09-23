@@ -1,0 +1,16 @@
+<header class="site-header {% if page.date == nil %}site-header-home{% else %}site-header-post{% endif %}" xmlns="http://www.w3.org/1999/html">
+  <div class="wrapper">
+
+    <a href="{{ site[page.language].home }}">
+      <img class="logo {% if page.date %}post-site-logo-image{% endif %}" src="{{ site.baseurl }}/img/photo.jpg" alt="{{ site[page.language].title }}">
+    </a>
+  </div>
+
+  <div class="trigger">
+    {% for sitePage in site.pages %}
+      {% if sitePage.nav and page.language == sitePage.language %}
+        <a class="site-nav-link" href="{{ sitePage.url | prepend: site.baseurl }}">{{ sitePage.nav }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</header>
