@@ -1,0 +1,62 @@
+---
+layout: page
+title: Blog
+permalink: /blog
+nav: Blog
+cls: blog full-width
+---
+<div class="top-bg">
+
+	<img src="img/splash-top.png" class="splash-top" alt>
+	<div class="page-title zoomIn animated">blog</div>
+</div>
+
+<!-- page content -->
+<div class="page-content">
+	<div class="grid-row clear">
+		<div class="grid-col-row">
+			<div class="grid-col">
+				<div id="content" role="main">
+					<div class="title">
+						<span class="main-title">BLOG</span>
+						<span class="slash-icon">/<i class="fa fa-angle-double-right"></i></span><h5>RUND UM DAS ATELIER</h5>
+					</div>
+
+					{% for post in posts %}
+					<div class="item clear">
+						<div class="media-block">
+							<div class="picture">
+								<div class="hover-effect"></div>
+								<div class="link-cont">
+									<a href="{{ post.thumbnail }}" class="fancy fa fa-search"></a>
+								</div>
+								<img src="{{ post.thumbnail }}" alt>
+							</div>
+						</div>
+						<div class="date">{{ post.when }}</div>
+						<div class="item-header">
+							<h3>{{ post.title }}</h3>
+						</div>
+						<div class="content">
+							{{ post.body }}
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/ page content -->
+<!-- subscribe -->
+<div class="subscribe">
+	<div class="grid-row clear">
+		<div class="them-mask"></div>
+		<div class="subscribe-header">Abonnieren</div>
+		<form action="#" class="clear">
+			<input type="email" placeholder="Ihre Email-Adresse">
+			<button type="submit" class="button-send">Senden</button>
+		</form>
+	</div>
+</div>
+<!--/ subscribe  -->

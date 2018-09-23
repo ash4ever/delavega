@@ -1,16 +1,27 @@
-<header class="site-header {% if page.date == nil %}site-header-home{% else %}site-header-post{% endif %}" xmlns="http://www.w3.org/1999/html">
-  <div class="wrapper">
-
-    <a href="{{ site[page.language].home }}">
-      <img class="logo {% if page.date %}post-site-logo-image{% endif %}" src="{{ site.baseurl }}/img/photo.jpg" alt="{{ site[page.language].title }}">
-    </a>
+<!-- page header -->
+<header id="home">
+  <!-- sticky menu -->
+  <div class="stick-wrapper">
+    <div class="sticky clear">
+      <div class="grid-row">
+        <img class="splash" src="img/splash.png" alt="">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <nav class="nav">
+          <a href="#" class="switcher">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="clear">
+            {% for sitePage in site.pages %}
+              {% if sitePage.nav %}
+                <li><a class="site-nav-link" href="{{ sitePage.url | prepend: site.baseurl }}">{{ sitePage.nav }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
-
-  <div class="trigger">
-    {% for sitePage in site.pages %}
-      {% if sitePage.nav and page.language == sitePage.language %}
-        <a class="site-nav-link" href="{{ sitePage.url | prepend: site.baseurl }}">{{ sitePage.nav }}</a>
-      {% endif %}
-    {% endfor %}
-  </div>
+  <!--/ sticky menu -->
 </header>
