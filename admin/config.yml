@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: razbakov/delavega
+  repo: ash4ever/delavega
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 collections:
