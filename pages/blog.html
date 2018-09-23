@@ -22,15 +22,15 @@ cls: blog full-width
 						<span class="slash-icon">/<i class="fa fa-angle-double-right"></i></span><h5>RUND UM DAS ATELIER</h5>
 					</div>
 
-					{% for post in posts %}
+					{% for post in site.posts %}
 					<div class="item clear">
 						<div class="media-block">
 							<div class="picture">
 								<div class="hover-effect"></div>
 								<div class="link-cont">
-									<a href="{{ post.thumbnail }}" class="fancy fa fa-search"></a>
+									<a href="{{ post.image }}" class="fancy fa fa-search"></a>
 								</div>
-								<img src="{{ post.thumbnail }}" alt>
+								<img src="{{ post.image }}" alt>
 							</div>
 						</div>
 						<div class="date">{{ post.when }}</div>
@@ -38,7 +38,7 @@ cls: blog full-width
 							<h3>{{ post.title }}</h3>
 						</div>
 						<div class="content">
-							{{ post.body }}
+							{{ post.content }}
 						</div>
 					</div>
 					{% endfor %}
