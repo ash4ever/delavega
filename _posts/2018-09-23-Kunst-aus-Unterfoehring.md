@@ -3,7 +3,7 @@ layout: post
 title: 'FERINGART 2018: Kunst aus Unterföhring'
 date: 2018-09-23T13:57:28.898Z
 when: Freitag, 28. September 2018
-thumbnail: /images/blog-10.jpg
+image: /images/blog-10.jpg
 ---
 
 Im Rahmen des 3. Bürger-Kulturfestivals präsentieren mehr als 20 Unterföhringer Künstlerinnen und Künstler ihre Werke.
